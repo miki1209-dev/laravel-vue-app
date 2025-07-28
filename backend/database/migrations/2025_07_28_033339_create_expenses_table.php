@@ -13,7 +13,14 @@ return new class extends Migration
 	{
 		Schema::create('expenses', function (Blueprint $table) {
 			$table->id();
+			$table->integer('amount');
+			$table->unsignedBigInteger('category_id');
+			$table->text('description')->nullable();
+			$table->date('date');
 			$table->timestamps();
+
+			//外部キーの制約
+			$table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 		});
 	}
 
