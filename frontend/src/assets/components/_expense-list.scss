@@ -1,0 +1,19 @@
+.expense-list {
+  list-style: none;
+  padding: 0;
+
+  &__item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+		list-style: none;
+  }
+
+  &__item:last-child {
+    border-bottom: none;
+  }
+
+  &__error {
+    color: red;
+    font-size: 14px;
+  }
+}
