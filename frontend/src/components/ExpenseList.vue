@@ -10,6 +10,7 @@
         :key="expense.id"
         :index="index"
         :expense="expense"
+        @edit-expense="removeExpense"
         @delete-expense="removeExpense"
       />
     </ul>

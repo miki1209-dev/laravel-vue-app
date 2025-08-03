@@ -61,8 +61,6 @@
 
       emit('add-expense', response.data);
 
-      console.log('登録完了', response.data);
-
       //formの初期化
       form.value = {
         date: '',
